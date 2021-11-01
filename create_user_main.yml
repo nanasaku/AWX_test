@@ -4,7 +4,7 @@
   gather_facts: true
   become: yes
   
-  #vars:
+  vars:
     User_Name: itoh_user
     User_Password: zaq12wsx
     User_Group: issw2
