@@ -1,0 +1,15 @@
+---
+- name: pre_infomation
+  hosts: all
+  gather_facts: true
+  become: yes
+  
+  vars:
+    User_Name: itoh_user
+  
+  tasks:
+    - name: delete user
+      user:
+        name: "{{ User_Name }}"
+        state: absent
+        remove: yes
