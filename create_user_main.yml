@@ -1,6 +1,6 @@
 ---
 - name: pre_infomation
-  hosts: awsissw2
+  hosts: ip-172-31-34-230.ap-northeast-1.compute.internal
   gather_facts: true
   become: yes
   
