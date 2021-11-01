@@ -5,14 +5,14 @@
   become: yes
   
   #vars:
-    item.name: itoh_user
-    item.password: zaq12wsx
-    item.group: issw2
+    User_Name: itoh_user
+    User_Password: zaq12wsx
+    User_Group: issw2
   
   tasks:
     - name: create user
       user:
-        name: "{{ item.name }}"
-        password: "{{ item.password }}"
-        groups:  "{{ item.group }}"
+        name: "{{ User_Name }}"
+        password: "{{ User_Password }}"
+        groups:  "{{ User_Group }}"
         shell: /bin/bash
