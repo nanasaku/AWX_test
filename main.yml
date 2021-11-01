@@ -1,3 +1,18 @@
-- hosts: localhost
+---
+- name: pre_infomation
+  hosts: awsissw2
+  gather_facts: true
+  become: yes
+  
+  #vars:
+    item.name: itoh_user
+    item.password: zaq12wsx
+    item.group: issw2
+  
   tasks:
-    - debug: msg="hello world"
+    - name: create user
+      user:
+        name: "{{ item.name }}"
+        password: "{{ item.password }}"
+        groups:  "{{ item.group }}"
+        shell: /bin/bash
