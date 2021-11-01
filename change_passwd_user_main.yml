@@ -11,4 +11,4 @@
     - name: change passwd user
       user:
         name: "{{ User_Name }}"
-        passwd: "{{ Change_Passwd }}"
+        password: "{{ Change_Passwd }}"
