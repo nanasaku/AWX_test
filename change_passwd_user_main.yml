@@ -1,0 +1,14 @@
+---
+- name: pre_infomation
+  hosts: all
+  gather_facts: true
+  become: yes
+  
+  vars:
+    User_Name: itoh_user
+  
+  tasks:
+    - name: change passwd user
+      user:
+        name: "{{ User_Name }}"
+        passwd: "{{ Change_Passwd }}"
